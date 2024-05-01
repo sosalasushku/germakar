@@ -1,4 +1,8 @@
-
+const audio = document.getElementById('audio')
+document.getElementById('sound-on').addEventListener('click', () => {
+    audio.play()
+    document.getElementById('sound-on').style.display = 'none'
+})
         const updateTimer = () => {
             const daysCount = document.getElementById('days-count')
             const daysLabel = document.getElementById('days-label')

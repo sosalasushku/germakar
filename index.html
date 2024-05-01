@@ -8,15 +8,14 @@
     <title>Макар и Германа</title>
 </head>
 <body>
-    <div data-scroll-container class="has-scroll-smooth">
-    <section class="video_container" data-scroll-section>
+    <div data-scroll-container>
+        <audio id="audio" loop autoplay>
+            <source src="assets/media/audio.mp3" type="audio/mpeg">
+        </audio>
+    <section class="video_container" data-scroll-section data-scroll-speed="1">
         <video autoplay muted loop class="video">
             <source src="assets/media/video.webm" type="video/webm">
         </video>
-        <!-- <div class="welcome_text">
-            <p>Уже совсем скоро</p>
-            <p>мы женимся!</p>
-        </div> -->
         <div class="video_text_container">
             <div class="video_text video_text-top">
                 <div style="opacity:0;transition: all 1500ms;" id="video-text-1">уже</div>
@@ -27,9 +26,91 @@
                 <div style="opacity:0;transition: all 1500ms;" id="video-text-4">мы</div>
                 <div style="opacity:0;transition: all 1500ms;" id="video-text-5">женимся</div>
             </div>
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <button id="sound-on" class="transition-300">Включить звук</button>
+            </div>
         </div>
     </section>
-    <section class="timer" data-scroll-section>
+    <section class="welcome container" data-scroll-section>
+        <div class="welcome_img" data-scroll data-scroll-speed="1">
+            <img src="assets/media/welcome_photo.webp">
+        </div>
+        
+        <div class="welcome_text" data-scroll data-scroll-speed="2">
+            <p class="welcome_text_title" data-scroll data-scroll-speed="1">
+                Дорогие друзья, родные и&nbsp;близкие!
+            </p>
+            <p class="welcome_text_text" data-scroll data-scroll-speed="1">
+                Мы счастливы пригласить вас на&nbsp;нашу свадьбу. Для&nbsp;нас очень важно, чтобы вы&nbsp;смогли 
+                разделить с&nbsp;нами самое счастливое мгновение в&nbsp;нашей жизни. 
+                Порадуйте нас своим присутствием!
+            </p>
+            <div class="welcome_text_signature"  data-scroll data-scroll-speed="1" data-scroll-delay="0.08">
+                Макар и Германа
+                <img src="assets/media/heart.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="programm container" data-scroll-section>
+        <div class="programm_content">
+            <p class="programm_date">
+                4.08.2024
+            </p>
+            <p class="programm_title">
+                Содержание вечера:
+            </p>
+            <div class="programm_programm">
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Сбор гостей</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>15:00</div>
+                </div>
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Что-то</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>16:00</div>
+                </div>
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Ещё что-то</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>17:30</div>
+                </div>
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Конкурсы</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>19:00</div>
+                </div>
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Тусня</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>23:00</div>
+                </div>
+            </div>
+        </div>
+        <div class="programm_img">
+            <img src="assets/media/programm.JPG" alt="">
+        </div>
+        
+    </section>
+    <section class="location container" data-scroll-section>
+        <img src="assets/media/location.jpg" alt="">
+        <div class="location_content">
+            <div class="location_content_text">
+                <img src="assets/media/location.svg" alt="">
+                <div>
+                    <p>Тамбов, ул. Малиновского, 39</p>
+                    <p>Парк-отель "Плёс"</p>
+                    
+                </div>
+            </div>
+            
+                <button class="btn location_btn">
+                    <a href="https://yandex.ru/maps/-/CDV-7BZJ" target="_blank">Открыть в Картах</a>
+                </button>
+              
+        </div>
+    </section>
+    <section class="timer container" data-scroll-section>
         <h1 class="timer_heading" data-scroll data-scroll-speed="1">До свадьбы осталось</h1>
         <div class="timer_days" data-scroll data-scroll-speed="3">
             <div id="days-count"></div>
@@ -46,7 +127,11 @@
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        multiplier: 0.5
+        multiplier: 0.5,
+        lerp: 0.1,
+        smartphone: {
+            smooth: true
+        }
     })
 </script>
 <script src="index.js"></script>

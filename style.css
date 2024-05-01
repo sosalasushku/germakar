@@ -15,6 +15,33 @@
     font-family: 'Remark';
 }
 
+button {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: 'Remark';
+    font-size: 20px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+a, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+#sound-on {
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .video_container {
     width: 100%;
     height: 100vh;
@@ -24,7 +51,7 @@
     object-fit: cover;
     object-position: center center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .video_text_container {
@@ -60,20 +87,144 @@
     align-items: flex-end;
 }
 
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.welcome_img {
+    padding: 36px;
+}
+
+.welcome img {
+    max-width: 100%;
+}
 .welcome_text {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    padding: 28px 36px 64px;
+    position: relative;
     display: flex;
     flex-direction: column;
+    gap: 24px;
     justify-content: center;
+    font-size: 28px;
+}
+
+.welcome_text_title {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.welcome_text_signature {
+    display: flex;
     align-items: center;
-    color: white;
+    gap: 8px;
+    align-self: flex-end;
+    width: fit-content;
+    font-family: 'Gogol';
+    transform: rotate(-3deg);
+    font-size: 36px;
+}
+
+.welcome_text_signature img {
+    position: relative;
+    bottom: 4px;
+}
+
+.programm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.programm_img {
+    overflow: hidden;
+    border-radius: 300px;
+    max-height: 90vh;
+    margin: 0 auto;
+}
+
+.programm_content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+    font-size: 20px;
+}
+
+.programm_img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.programm_date {
+    font-size: 80px;
+    text-align: center;
+}
+
+.programm_title {
+    font-family: 'Gogol';
+    text-align: center;
+    font-size: 2rem;
+}
+
+.programm_programm {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.programm_programm_item {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.programm_programm_item_event {
+    white-space: nowrap;
+}
+
+.programm_programm_item-dashed {
+    width: 100%;
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    margin-bottom: 3px;
+}
+
+.location {
+    display: flex;
+    padding: 40px 0;
+}
+
+.location > img {
+    max-height: 80vh;
+    transform: rotate(-4deg);
+}
+
+.location_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 30px 10px 0;
+    margin: 0 auto;
+}
+
+.location_content_text {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5em;
+}
+
+.location_btn {
+    width: 100%;
+    border: 1px solid black;
 }
 
 .timer {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -85,9 +236,11 @@
 }
 
 .timer_heading {
+    position: absolute;
+    top: 10%;
+    z-index: -1;
     color: #E8E3DB;
     opacity: .5;
-    text-align: center;
     text-transform: uppercase;
     font-size: 8rem;
 }
@@ -113,5 +266,47 @@
 }
 .video_text-bottom {
     font-size: 45px;
+}
+
+.welcome, .programm {
+    grid-template-columns: 1fr;
+}
+
+.welcome_img {
+    padding-bottom: 20px;
+}
+
+.welcome_text {
+    padding-top: 0;
+}
+
+.welcome_text_text {
+    font-size: 1.2rem;
+}
+
+.welcome_text_signature {
+    font-size: 24px;
+}
+
+.welcome_text_signature img {
+    width: 20px;
+}
+
+.programm_img {
+    order: -1;
+}
+
+.location {
+    flex-direction: column;
+}
+
+.location img {
+    max-width: 90%;
+    left: -20px;
+}
+
+.timer_heading {
+    text-align: center;
+    font-size: 4rem;
 }
 }
