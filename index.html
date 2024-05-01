@@ -4,51 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css" rel="stylesheet">
     <title>Макар и Германа</title>
 </head>
 <body>
-    <section class="video_container">
-        <video autoplay muted class="video">
+    <div data-scroll-container class="has-scroll-smooth">
+    <section class="video_container" data-scroll-section>
+        <video autoplay muted loop class="video">
             <source src="assets/media/video.webm" type="video/webm">
         </video>
-        <div class="welcome_text">
+        <!-- <div class="welcome_text">
             <p>Уже совсем скоро</p>
             <p>мы женимся!</p>
+        </div> -->
+        <div class="video_text_container">
+            <div class="video_text video_text-top">
+                <div style="opacity:0;transition: all 1500ms;" id="video-text-1">уже</div>
+                <div style="opacity:0;transition: all 1500ms;" id="video-text-2">совсем</div>
+                <div style="opacity:0;transition: all 1500ms;" id="video-text-3">скоро</div>
+            </div>
+            <div class="video_text video_text-bottom">
+                <div style="opacity:0;transition: all 1500ms;" id="video-text-4">мы</div>
+                <div style="opacity:0;transition: all 1500ms;" id="video-text-5">женимся</div>
+            </div>
         </div>
     </section>
-    <section class="timer">
-        <div class="timer_days">
+    <section class="timer" data-scroll-section>
+        <h1 class="timer_heading" data-scroll data-scroll-speed="1">До свадьбы осталось</h1>
+        <div class="timer_days" data-scroll data-scroll-speed="3">
             <div id="days-count"></div>
             <div id="days-label"></div>
         </div>
-        <div class="time_label">и</div>
-        <div class="timer_time">
-            <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        <div class="time_label" data-scroll>и</div>
+        <div class="timer_time" data-scroll>
+            <span id="hours" data-scroll data-scroll-delay="0.5" data-scroll-speed="3"></span>:<span id="minutes" data-scroll data-scroll-delay="0.4" data-scroll-speed="3"></span>:<span id="seconds" data-scroll data-scroll-delay="0.3" data-scroll-speed="3"></span>
         </div>
     </section>
-    <script>
-        const updateTimer = () => {
-            const daysCount = document.getElementById('days-count')
-            const daysLabel = document.getElementById('days-label')
-            const hours = document.getElementById('hours')
-            const minutes = document.getElementById('minutes')
-            const seconds = document.getElementById('seconds')
-            const currentDate = new Date()
-            const dateOfWedding = new Date(2024, 7, 4, 15)
-            let milisecondsLeft = dateOfWedding - currentDate
-            let daysLeft = Math.trunc(milisecondsLeft / 86400000)
-            let hoursLeft = Math.trunc(((milisecondsLeft) % 86400000) / 3600000)
-            let minutesLeft = Math.trunc((milisecondsLeft - daysLeft * 86400000 - hoursLeft * 3600000)/60000)
-            let secondsLeft = Math.trunc(Math.trunc((milisecondsLeft - daysLeft * 86400000 - hoursLeft * 3600000 - minutesLeft * 60000) / 1000))
-            daysCount.innerText = daysLeft
-            daysLabel.innerText = String(daysLeft).slice(-1) === '1' ? 'день' : 
-                ['2','3','4'].includes(String(daysLeft).slice(-1)) ? 'дня' : 'дней'
-            hours.innerText = ('0' + hoursLeft).slice(-2)
-            minutes.innerText = ('0' + minutesLeft).slice(-2)
-            seconds.innerText = ('0' + secondsLeft).slice(-2)
-        }
-        
-        setInterval(updateTimer, 1000)
-    </script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"> </script>
+<script>
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        multiplier: 0.5
+    })
+</script>
+<script src="index.js"></script>
 </body>
 </html>
