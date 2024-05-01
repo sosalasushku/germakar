@@ -38,8 +38,10 @@ a, a:active {
 }
 
 .container {
+    max-height: 100vh;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 60px auto 0;
+    padding: 20px;
 }
 
 .video_container {
@@ -88,25 +90,36 @@ a, a:active {
 }
 
 .welcome {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .welcome_img {
-    padding: 36px;
+    max-height: 90vh;
+    max-width: 60vh;
 }
 
-.welcome img {
+.welcome_img img {
     max-width: 100%;
+    max-height: 100%;
 }
+
+.welcome_content {
+    max-height: 100%;
+    width: 100%;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .welcome_text {
-    padding: 28px 36px 64px;
-    position: relative;
+    max-width: 564px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    justify-content: center;
-    font-size: 28px;
 }
 
 .welcome_text_title {
@@ -131,31 +144,35 @@ a, a:active {
 }
 
 .programm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+}
+
+.programm_img_container {
+    padding: 0 36px;
+    max-height: 85vh;
+    
 }
 
 .programm_img {
     overflow: hidden;
     border-radius: 300px;
-    max-height: 90vh;
+    max-height: 100%;
     margin: 0 auto;
+    aspect-ratio: 7/10;
+}
+
+.programm_img img {
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin-bottom: -4px;
+    
 }
 
 .programm_content {
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
     align-self: center;
-    gap: 2rem;
     font-size: 20px;
-}
-
-.programm_img img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
 }
 
 .programm_date {
@@ -167,6 +184,7 @@ a, a:active {
     font-family: 'Gogol';
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 8px;
 }
 
 .programm_programm {
@@ -199,28 +217,34 @@ a, a:active {
 }
 
 .location > img {
+    position: relative;
+    left: -20px;
     max-height: 80vh;
+    max-width: 60%;
     transform: rotate(-4deg);
 }
 
 .location_content {
+    position: relative;
+    bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 50px 30px 10px 0;
+    justify-content: center;
+    gap: 32px;
     margin: 0 auto;
+    font-size: 28px;
 }
 
 .location_content_text {
     display: flex;
     align-items: flex-start;
-    font-size: 1.5em;
 }
 
 .location_btn {
     width: 100%;
     border: 1px solid black;
+    padding: 20px 40px;
 }
 
 .timer {
@@ -260,7 +284,13 @@ a, a:active {
     font-size: 60px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+.container {
+    max-height:none;
+}
+.video_container, .video {
+    height: calc(var(--vh, 1vh) * 100);
+}
 .video_text-top {
     font-size: 28px;
 }
@@ -269,7 +299,7 @@ a, a:active {
 }
 
 .welcome, .programm {
-    grid-template-columns: 1fr;
+    flex-direction: column;
 }
 
 .welcome_img {
@@ -292,7 +322,7 @@ a, a:active {
     width: 20px;
 }
 
-.programm_img {
+.programm_img_container {
     order: -1;
 }
 
@@ -300,7 +330,15 @@ a, a:active {
     flex-direction: column;
 }
 
-.location img {
+.location_content {
+    padding-right: 0;
+    margin-top: 36px;
+    bottom: 0;
+    font-size: 18px;
+}
+
+.location > img {
+    position: relative;
     max-width: 90%;
     left: -20px;
 }
