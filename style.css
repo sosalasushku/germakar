@@ -334,12 +334,15 @@ a, a:active {
 }
 
 .video_container {
-    height: calc(var(--wh));
-    overflow: hidden;
+    height: 620px;
 }
 
 .video {
-    height: calc(var(--wh));
+    height: 620px;
+}
+
+.video_text_container {
+    height: 620px;
 }
 
 .video_text-top {
@@ -423,10 +426,6 @@ a, a:active {
 
 #days-count {
     margin-top: 40px;
-}
-
-.timer {
-    height: calc(var(--vh, 1vh) * 100);
 }
 
 .timer_time {
