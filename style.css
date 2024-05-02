@@ -66,6 +66,7 @@ a, a:active {
     z-index: 200;
     background: black;
     object-fit: cover;
+    transition: all 500ms;
 }
 
 .video_text {
