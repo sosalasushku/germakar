@@ -1,5 +1,7 @@
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+let vh = window.innerHeight * 0.01
+let wh = window.innerHeight
+document.documentElement.style.setProperty('--vh', `${vh}px`)
+document.documentElement.style.setProperty('--wh', `${wh}px`)
 
 const audio = document.getElementById('audio')
 document.getElementById('sound-on').addEventListener('click', () => {

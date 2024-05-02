@@ -334,12 +334,12 @@ a, a:active {
 }
 
 .video_container {
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--wh));
     overflow: hidden;
 }
 
 .video {
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--wh));
 }
 
 .video_text-top {
