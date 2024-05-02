@@ -38,7 +38,7 @@ a, a:active {
 }
 
 .container {
-    height: 100dvh;
+    height: 100vh;
     max-width: 1280px;
     width: 100%;
     padding: 0 20px;
@@ -47,14 +47,14 @@ a, a:active {
 
 .video_container {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
 }
 
 .video {
     object-fit: cover;
     object-position: center center;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
 }
 
 .video_text_container {
@@ -103,7 +103,7 @@ a, a:active {
 }
 
 .welcome_img {
-    max-height: 100dvh;
+    max-height: 100vh;
 }
 
 .welcome_img img {
@@ -156,7 +156,7 @@ a, a:active {
 
 .programm_img {
     overflow: hidden;
-    max-height: 80dvh;
+    max-height: 80vh;
     aspect-ratio: 7/10;
 }
 
@@ -224,7 +224,7 @@ a, a:active {
 .location > img {
     position: relative;
     left: -20px;
-    max-height: 80dvh;
+    max-height: 80vh;
     max-width: 60%;
     transform: rotate(-4deg);
 }
@@ -278,7 +278,7 @@ a, a:active {
 .timer {
     position: relative;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -297,7 +297,7 @@ a, a:active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 95dvh;
+    height: 95vh;
     top: 6%;
     color: #E8E3DB;
     opacity: .25;
@@ -330,6 +330,14 @@ a, a:active {
 .container {
     height:auto;
     margin-top: 40px;
+}
+
+.video_container {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.video {
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .video_text-top {
@@ -416,7 +424,7 @@ a, a:active {
 }
 
 .timer {
-    height: 100dvh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .timer_time {
