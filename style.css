@@ -64,6 +64,8 @@ a, a:active {
     top: 0;
     bottom: 0;
     z-index: 200;
+    background-image: url('assets/media/welcome_photo.webp');
+    object-fit: cover;
 }
 
 .video_text {
@@ -301,7 +303,7 @@ a, a:active {
     height: 95vh;
     top: 6%;
     color: #E8E3DB;
-    opacity: .25;
+    opacity: .5;
     text-transform: uppercase;
     font-size: 150px;
     line-height: .9;

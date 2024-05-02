@@ -1,3 +1,11 @@
+const video = document.getElementById("video")
+const videoContainer = document.getElementById("video-container")
+video.addEventListener("loadeddata", () => {
+  if (video.readyState === 4) {
+    videoContainer.style.backgroundImage = 'unset'
+  }
+});
+
 const audio = document.getElementById('audio')
 document.getElementById('sound-on').addEventListener('click', () => {
     audio.play()
