@@ -64,8 +64,6 @@ a, a:active {
     top: 0;
     bottom: 0;
     z-index: 200;
-    background: black;
-    transition: all 500ms;
 }
 
 .video_text {
