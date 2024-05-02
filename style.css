@@ -65,7 +65,6 @@ a, a:active {
     bottom: 0;
     z-index: 200;
     background: black;
-    object-fit: cover;
     transition: all 500ms;
 }
 
