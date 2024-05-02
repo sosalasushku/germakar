@@ -334,6 +334,7 @@ a, a:active {
 
 .video_container {
     height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
 }
 
 .video {
