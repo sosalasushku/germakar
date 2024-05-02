@@ -64,7 +64,7 @@ a, a:active {
     top: 0;
     bottom: 0;
     z-index: 200;
-    background-image: url('assets/media/welcome_photo.webp');
+    background: black;
     object-fit: cover;
 }
 
