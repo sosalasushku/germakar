@@ -34,7 +34,7 @@ a, a:active {
 .arrow_btn {
     margin-top: 30px;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 #sound-on {
@@ -221,25 +221,46 @@ a, a:active {
 
 .location {
     display: flex;
+    flex-direction: column;
+    gap: 40px;
     padding: 40px 0;
+    height: auto !important;
 }
 
-.location > img {
+.location_imgs {
+    display: flex;
+    justify-content: center;
     position: relative;
-    left: -20px;
+}
+
+.location_img-1 {
+    transform: translateX(-20%) rotate(-4deg);
     max-height: 80vh;
     max-width: 60%;
-    transform: rotate(-4deg);
+    overflow: hidden;
+}
+
+.location_img-2 {
+    position: absolute;
+    right: 50%;
+    transform: translate(100%, 20%) rotate(4deg);
+    max-height: 80vh;
+    max-width: 40%;
+    overflow: hidden;
+}
+
+.location_imgs img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 8px solid white;
 }
 
 .location_content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 80px;
     margin: 60px auto 0;
-    font-size: 28px;
-    width: 400px;
+    font-size: 24px;
+    width: 60%;
 }
 
 .location_content_text {
@@ -281,7 +302,6 @@ a, a:active {
 .timer {
     position: relative;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 56px;
@@ -289,12 +309,26 @@ a, a:active {
     align-self: center;
     justify-content: center;
     text-align: center;
-    background-image: url('germakar/assets/media/timer_photo.JPG');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: white;
     font-size: 20px;
+    padding: 60px 0;
+}
+
+.timer_bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.timer_bg {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .timer_days, .timer_label, .timer_time {
@@ -348,6 +382,11 @@ a, a:active {
 @media (max-width: 600px) {
 .arrow_btn {
     margin-top: 20px;
+    width: 100%;
+}
+
+.arrow_btn img {
+    max-width: 60%;
 }
 .container {
     height:auto;
@@ -401,26 +440,44 @@ a, a:active {
 }
 
 .welcome_text_signature {
-    font-size: 36px;
+    font-size: 30px;
 }
 
 .welcome_text_signature img {
-    width: 24px;
+    width: 20px;
 }
 
 .location {
+    margin-top: 120px;
     flex-direction: column;
 }
 
-.location_btn {
-    align-self: center;
+.location_imgs {
+    flex-direction: column;
+}
+
+.location_img-1 {
+    max-width: unset;
+}
+
+.location_img-2 {
+    right: -20px;
+    left:80px;
+    transform: translate(0, -55%) rotate(4deg);
+    max-width: unset;
+}
+
+.location_imgs img {
+    border-width: 4px;
 }
 
 .location_content {
+    flex-direction: column;
     padding: 0 20px;
     margin-top: 36px;
     font-size: 18px;
     gap: 40px;
+    width: auto;
 }
 
 .location_content_item {
@@ -435,6 +492,11 @@ a, a:active {
     left: -20px;
 }
 
+.timer {
+    padding: 40px 0;
+    gap: 28px;
+}
+
 .timer_heading {
     font-size: 4rem;
     margin-bottom: -50px;
@@ -446,6 +508,6 @@ a, a:active {
 }
 
 .tg-desc {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 }
