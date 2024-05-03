@@ -1,11 +1,12 @@
-// const video = document.getElementById("video")
+const video = document.getElementById("video")
+video.setAttribute("autoplay", "autoplay")
 // const videoContainer = document.getElementById("video-container")
-// video.addEventListener("loadeddata", () => {
-//   if (video.readyState === 4) {
-//     // videoContainer.style.background = 'none'
-//     console.log('loaded')
-//   }
-// });
+video.addEventListener("loadeddata", () => {
+  if (video.readyState === 4) {
+    // videoContainer.style.background = 'none'
+    console.log('loaded')
+  }
+});
 
 const audio = document.getElementById('audio')
 document.getElementById('sound-on').addEventListener('click', () => {
