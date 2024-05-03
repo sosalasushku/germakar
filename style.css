@@ -8,7 +8,7 @@
     font-family: 'Remark';
 }
 
-* {
+*, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,10 +31,20 @@ a, a:active {
     color: black;
 }
 
+.arrow_btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+}
+
 #sound-on {
     border: 1px solid white;
     border-radius: 20px;
     color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container {
@@ -42,24 +52,13 @@ a, a:active {
     max-width: 1280px;
     width: 100%;
     padding: 0 20px;
-    margin: 20px auto;
-}
-
-.iframe_container {
-    width: 100%;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-.iframe_container iframe {
-    width: 300%;
-    height: 100vh;
-    margin-left: -100%;
+    margin: 40px auto;
 }
 
 .video_container {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .video {
@@ -67,15 +66,6 @@ a, a:active {
     object-position: center center;
     width: 100%;
     height: 100vh;
-}
-
-.video_text_container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 200;
 }
 
 .video_text {
@@ -226,7 +216,7 @@ a, a:active {
     background-position: bottom;
     background-size: 3px 1px;
     background-repeat: repeat-x;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .location {
@@ -294,11 +284,17 @@ a, a:active {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 56px;
     align-items: center;
     align-self: center;
     justify-content: center;
     text-align: center;
+    background-image: url('assets/media/timer_photo.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-size: 20px;
 }
 
 .timer_days, .timer_label, .timer_time {
@@ -306,24 +302,20 @@ a, a:active {
 }
 
 .timer_heading {
-    position: absolute;
-    display: flex;
+    font-family: "Gogol";
     flex-direction: column;
     justify-content: space-between;
-    height: 95vh;
-    top: 6%;
     color: #E8E3DB;
     opacity: .5;
-    text-transform: uppercase;
-    font-size: 150px;
+    font-size: 80px;
     line-height: .9;
+    margin-bottom: -40px;
 }
 
 #days-count {
     font-size: 220px;
     letter-spacing: -8px;
     line-height: 90%;
-    margin-top: 20px;
 }
 
 #days-label {
@@ -334,27 +326,40 @@ a, a:active {
 }
 
 .timer_time {
-    font-size: 80px;
+    font-size: 60px;
     display: flex;
     gap: 12px;
 }
 
+.tg-desc {
+    max-width: 80%;
+}
+
+.tg-btn {
+    margin: 16px auto 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+.tg-btn img {
+    width: 100%;
+}
+
 @media (max-width: 600px) {
+.arrow_btn {
+    margin-top: 20px;
+}
 .container {
     height:auto;
     margin-top: 40px;
 }
 
 .video_container {
-    height: 620px;
+    height: 95vh;
 }
 
 .video {
-    height: 620px;
-}
-
-.video_text_container {
-    height: 620px;
+    height: 95vh;
 }
 
 .video_text-top {
@@ -396,11 +401,11 @@ a, a:active {
 }
 
 .welcome_text_signature {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 .welcome_text_signature img {
-    width: 20px;
+    width: 24px;
 }
 
 .location {
@@ -431,16 +436,16 @@ a, a:active {
 }
 
 .timer_heading {
-    text-align: center;
     font-size: 4rem;
-    justify-content: flex-start;
+    margin-bottom: -50px;
 }
 
 #days-count {
+    font-size: 220px;
     margin-top: 40px;
 }
 
-.timer_time {
-    font-size: 60px;
+.tg-desc {
+    margin-top: 40px;
 }
 }

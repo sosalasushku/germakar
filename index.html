@@ -14,18 +14,9 @@
         </audio>
     <section class="video_container">
         <video autoplay muted loop playsinline preload="metadata" onloadedmetadata="this.muted = true" class="video" id="video">
-            <!-- <video src="https://vimeo.com/940848616" type="video/mp4"></video>
-            <source src="assets/media/video.webm" type="video/webm" autoplay="true"> -->
+            <source src="assets/media/video.webm" type="video/webm">
             <source src="assets/media/video.mp4" type="video/mp4">
         </video>
-        <!-- <div class="iframe_container">
-            <iframe
-                src="https://www.youtube.com/embed/srWfA8maoII?si=u_uglZgEHC6un-zL&autoplay=1&mute=1&controls=0&loop=1&modestbranding=0&rel=0&playlist=srWfA8maoII&playsinline=1&enablejsapi=1"
-                title="0" controls="0" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div> -->
-        <div class="video_text_container" id="video-container">
             <div class="video_text video_text-top">
                 <div class="video_text_item" id="video-text-1">уже</div>
                 <div class="video_text_item" id="video-text-2">совсем</div>
@@ -35,9 +26,7 @@
                 <div class="video_text_item" id="video-text-4">мы</div>
                 <div class="video_text_item" id="video-text-5">женимся</div>
             </div>
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                <button id="sound-on" class="transition-300">Включить звук</button>
-            </div>
+            <button id="sound-on">Включить звук</button>
         </div>
     </section>
     
@@ -79,22 +68,27 @@
                     <div>15:00</div>
                 </div>
                 <div class="programm_programm_item">
-                    <div class="programm_programm_item_event">Что-то</div>
+                    <div class="programm_programm_item_event">Церемония</div>
+                    <div class="programm_programm_item-dashed"></div>
+                    <div>15:30</div>
+                </div>
+                <div class="programm_programm_item">
+                    <div class="programm_programm_item_event">Фотодвижения</div>
                     <div class="programm_programm_item-dashed"></div>
                     <div>16:00</div>
                 </div>
                 <div class="programm_programm_item">
-                    <div class="programm_programm_item_event">Ещё что-то</div>
+                    <div class="programm_programm_item_event">Банкет</div>
                     <div class="programm_programm_item-dashed"></div>
-                    <div>17:30</div>
+                    <div>16:30</div>
                 </div>
                 <div class="programm_programm_item">
-                    <div class="programm_programm_item_event">Конкурсы</div>
+                    <div class="programm_programm_item_event">Дискотека</div>
                     <div class="programm_programm_item-dashed"></div>
-                    <div>19:00</div>
+                    <div>22:00</div>
                 </div>
                 <div class="programm_programm_item">
-                    <div class="programm_programm_item_event">Тусня</div>
+                    <div class="programm_programm_item_event">Завершение вечера</div>
                     <div class="programm_programm_item-dashed"></div>
                     <div>23:00</div>
                 </div>
@@ -108,16 +102,19 @@
         <img src="assets/media/location.jpg">
         <div class="location_content">
             <div class="location_content_item">
-                <div class="location_content_text">
-                <img src="assets/media/location.svg">
                 <div>
                     <p>Тамбов, ул. Малиновского, 39</p>
                     <p>Парк-отель "Плёс"</p>
                     
                 </div>
-            </div>
-            <button class="btn location_btn">
-                <a href="https://yandex.ru/maps/-/CDV-7BZJ" target="_blank">Открыть в Картах</a>
+            
+                <a href="https://yandex.ru/maps/-/CDV-7BZJ" target="_blank" >
+                    <div class="arrow_btn">
+                        <img src="assets/media/btn_map.svg" alt="Открыть в картах">
+                    </div>
+                </a>
+            
+                
             </button>
             </div>
             <div class="location_content_item">
@@ -126,9 +123,11 @@
             <div class="location_content_text">
                 По всем вопросам можете писать нашему организатору Анне
             </div>
-                <button class="btn location_btn">
-                    <a href="https://wa.clck.bar/79202318280" target="_blank">Написать</a>
-                </button>
+                <a href="https://wa.clck.bar/79202318280" target="_blank">
+                    <div class="arrow_btn">
+                        <img src="assets/media/btn_write.svg" alt="Написать">
+                    </div>
+                </a>
             </div>
                 
         </div>
@@ -138,15 +137,27 @@
     </section>
     <section class="timer">
         <div class="timer_heading">
-            <div>До свадьбы</div> 
-            <div>осталось</div>
+            До свадьбы 
         </div>
-        <div class="timer_days">
+        <div>
+           <div class="timer_days">
             <div id="days-count"></div>
             <div id="days-label"></div>
         </div>
         <div class="timer_time">
             <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        </div> 
+        </div>
+        
+        <div class="tg-desc">
+            <div>
+                <p>А чтобы скрасить ваше ожидание торжества, мы создали чат для гостей.</p>
+                <p>Вступайте, знакомьтесь, будьте в курсе наших новостей:</p>
+            </div>
+            <div class="tg-btn">
+                <img src="assets/media/tg_icon.svg">
+            </div>
+            
         </div>
     </section>
 </div>
