@@ -18,9 +18,9 @@ video.addEventListener("loadeddata", () => {
 
 const audio = document.getElementById('audio')
 document.getElementById('video-text-0').addEventListener('click', () => {
-    // audio.play()
-    video.setAttribute("muted", false)
-    document.getElementById('sound-on').remove()
+    audio.currentTime = 25
+    audio.play()
+    document.getElementById('video-text-0').remove()
 })
 
 const updateTimer = () => {
