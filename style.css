@@ -37,12 +37,12 @@ a, a:active {
     justify-content: flex-end;
 }
 
-#sound-on {
+#video-text-0 {
     border: 1px solid white;
     border-radius: 20px;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -66,6 +66,21 @@ a, a:active {
     object-position: center center;
     width: 100%;
     height: 100vh;
+}
+
+#preload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: all 5000ms;
 }
 
 .video_text {
@@ -112,6 +127,9 @@ a, a:active {
 .welcome_img img {
     max-width: 100%;
     max-height: 100%;
+    border: 4px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+    transform: rotate(-4deg);
 }
 
 .welcome_content {
@@ -169,7 +187,10 @@ a, a:active {
     width: auto;
     height: auto;
     margin-bottom: -4px;
-    border-radius: 300px;
+    /* border-radius: 300px; */
+    border: 4px solid white;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+        transform: rotate(4deg);
 }
 
 .programm_content {
@@ -183,8 +204,7 @@ a, a:active {
     font-size: 100px;
     text-align: center;
     margin-bottom: 16px;
-    color: #E8E3DB;
-    opacity: .5;
+    color: #FFCB45;
 }
 
 .programm_title {
@@ -221,56 +241,33 @@ a, a:active {
 
 .location {
     display: flex;
-    flex-direction: column;
     gap: 40px;
-    padding: 40px 0;
+    padding: 40px;
     height: auto !important;
 }
 
-.location_imgs {
+.location_img {
     display: flex;
     justify-content: center;
     position: relative;
-}
-
-.location_img-1 {
-    transform: translateX(-20%) rotate(-4deg);
-    max-height: 80vh;
     max-width: 60%;
-    overflow: hidden;
 }
 
-.location_img-2 {
-    position: absolute;
-    right: 50%;
-    transform: translate(100%, 20%) rotate(4deg);
-    max-height: 80vh;
-    max-width: 40%;
-    overflow: hidden;
-}
-
-.location_imgs img {
+.location_img img {
     max-width: 100%;
     max-height: 100%;
-    border: 8px solid white;
 }
 
 .location_content {
-    display: flex;
-    gap: 80px;
-    margin: 60px auto 0;
-    font-size: 24px;
-    width: 60%;
+    margin: 80px auto 0;
+    font-size: 28px;
+    width: 40%;
 }
 
 .location_content_text {
     display: flex;
     align-items: flex-start;
     
-}
-
-.location_content_item {
-    width: 100%;
 }
 
 .location_btn {
@@ -323,9 +320,6 @@ a, a:active {
     right: 0;
     height: 100%;
     width: 100%;
-}
-
-.timer_bg {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -344,6 +338,10 @@ a, a:active {
     font-size: 80px;
     line-height: .9;
     margin-bottom: -40px;
+}
+
+.timer_main {
+    color: #FFCB45;
 }
 
 #days-count {
@@ -366,6 +364,9 @@ a, a:active {
 }
 
 .tg-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     max-width: 80%;
 }
 
@@ -389,16 +390,16 @@ a, a:active {
     max-width: 60%;
 }
 .container {
-    height:auto;
+    height: auto;
     margin-top: 40px;
 }
 
 .video_container {
-    height: 95vh;
+    height: 100svh;
 }
 
 .video {
-    height: 95vh;
+    height: 100svh;
 }
 
 .video_text-top {
@@ -411,6 +412,10 @@ a, a:active {
 .welcome, .programm {
     flex-direction: column;
     gap: 20px;
+}
+
+.welcome_img img, .programm img {
+    transform: none;
 }
 
 .programm {
@@ -448,36 +453,24 @@ a, a:active {
 }
 
 .location {
-    margin-top: 120px;
     flex-direction: column;
+    position: relative;
 }
 
-.location_imgs {
-    flex-direction: column;
-}
-
-.location_img-1 {
-    max-width: unset;
-}
-
-.location_img-2 {
-    right: -20px;
-    left:80px;
-    transform: translate(0, -55%) rotate(4deg);
-    max-width: unset;
-}
-
-.location_imgs img {
-    border-width: 4px;
+.location_img {
+    max-width: 200%;
+    position: absolute;
+    left:-40%;
+    right:-40%;
 }
 
 .location_content {
     flex-direction: column;
     padding: 0 20px;
-    margin-top: 36px;
+    margin-top: 620px;
     font-size: 18px;
     gap: 40px;
-    width: auto;
+    width: 100%;
 }
 
 .location_content_item {

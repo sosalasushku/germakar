@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Макар и Германа</title>
 </head>
 <body>
@@ -13,10 +14,12 @@
             <source src="assets/media/audio.mp3" type="audio/mpeg">
         </audio>
     <section class="video_container">
-        <video autoplay muted loop playsinline preload="metadata" onloadedmetadata="this.muted = true" class="video" id="video">
+        <video autoplay muted loop playsinline preload="metadata" class="video" id="video">
             <source src="assets/media/video.webm" type="video/webm">
             <source src="assets/media/video.mp4" type="video/mp4">
         </video>
+            <img src="assets/media/preload.jpg" id="preload">
+        
             <div class="video_text video_text-top">
                 <div class="video_text_item" id="video-text-1">уже</div>
                 <div class="video_text_item" id="video-text-2">совсем</div>
@@ -26,7 +29,7 @@
                 <div class="video_text_item" id="video-text-4">мы</div>
                 <div class="video_text_item" id="video-text-5">женимся</div>
             </div>
-            <button id="sound-on">Включить звук</button>
+            <button class="video_text_item" id="video-text-0">Включить звук</button>
         </div>
     </section>
     
@@ -97,16 +100,10 @@
         <img src="assets/media/programm.JPG">
     </section>
     <section class="location container">
-        <div class="location_imgs">
-        <div class="location_img-1">
-            <img src="assets/media/location.jpg">
-        </div>
-        <div class="location_img-2">
-            <img src="assets/media/location-2.jpeg">
-        </div>
+        <div class="location_img">
+            <img src="assets/media/location.png">
         </div>
         <div class="location_content">
-            <div class="location_content_item">
                 <div>
                     <p>Тамбов, ул. Малиновского, 39</p>
                     <p>Парк-отель «Ples»</p>
@@ -116,18 +113,6 @@
                         <img src="assets/media/btn_map.svg" alt="Открыть в картах">
                     </div>
                 </a>
-            </button>
-            </div>
-            <div class="location_content_item">
-                <div class="location_content_text">
-                    По всем вопросам можете писать нашему организатору Анне
-                </div>
-                <a href="https://wa.clck.bar/79202318280" target="_blank">
-                    <div class="arrow_btn">
-                        <img src="assets/media/btn_write.svg" alt="Написать">
-                    </div>
-                </a>
-            </div>
         </div>
     </section>
     <section class="timer">
@@ -135,7 +120,7 @@
         <div class="timer_heading">
             До свадьбы 
         </div>
-        <div>
+        <div class="timer_main">
            <div class="timer_days">
             <div id="days-count"></div>
             <div id="days-label"></div>
@@ -146,14 +131,23 @@
         </div>
         
         <div class="tg-desc">
-            <div>
+            <div class="tg-desc_item">
                 <p>А чтобы скрасить ваше ожидание торжества, мы создали чат для гостей.</p>
                 <p>Вступайте, знакомьтесь, будьте в курсе наших новостей:</p>
-            </div>
+            
             <div class="tg-btn">
                 <img src="assets/media/tg_icon.svg">
             </div>
+        </div>
+            <div class="tg-desc_item">
+                <p>По всем вопросам можете писать нашему организатору Анне</p>
             
+            <div class="tg-btn">
+                <a href="https://wa.clck.bar/79202318280" target="_blank">
+                    <img src="assets/media/wa_icon.svg">
+                </a>
+            </div>
+        </div>
         </div>
     </section>
 </div>
