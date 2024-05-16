@@ -383,9 +383,6 @@ a, a:active {
     top: 220px;
     right: 20px;
     font-size: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     user-select: none;
 }
 
@@ -627,13 +624,15 @@ a, a:active {
 }
 
 .dress_carousel_label {
+    font-size: 28px;
     position: static;
     max-width: 182px;
     margin: 16px 0 0 auto;
 }
 
-.dress_carousel_label img {
-    margin-top: 2px;
+.dress_carousel_label div {
+    margin-bottom: -18px;
+    margin-left: 4px;
 }
 
 .heading_accent {
