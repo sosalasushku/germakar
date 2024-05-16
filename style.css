@@ -31,6 +31,15 @@ a, a:active {
     color: black;
 }
 
+.photo {
+    border: 4px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+}
+
+.text {
+    font-size: 28px;
+}
+
 .arrow_btn {
     margin-top: 30px;
     display: flex;
@@ -127,14 +136,11 @@ a, a:active {
 .welcome_img img {
     max-width: 100%;
     max-height: 100%;
-    border: 4px solid white;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
     transform: rotate(-4deg);
 }
 
 .welcome_content {
     max-height: 100%;
-    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,10 +193,7 @@ a, a:active {
     width: auto;
     height: auto;
     margin-bottom: -4px;
-    /* border-radius: 300px; */
-    border: 4px solid white;
-        box-shadow: 0 0 4px rgba(0, 0, 0, .25);
-        transform: rotate(4deg);
+    transform: rotate(4deg);
 }
 
 .programm_content {
@@ -200,11 +203,16 @@ a, a:active {
     width: 440px;
 }
 
-.programm_date {
-    font-size: 100px;
+.heading_accent {
+    font-size: 80px;
     text-align: center;
     margin-bottom: 16px;
-    color: #FFCB45;
+    color: #88460B;
+    text-transform: uppercase;
+}
+
+.programm_date {
+    font-size: 100px !important;
 }
 
 .programm_title {
@@ -217,7 +225,6 @@ a, a:active {
 .programm_programm {
     display: grid;
     gap: 0.5rem;
-    font-size: 28px;
 }
 
 .programm_programm_item {
@@ -241,8 +248,7 @@ a, a:active {
 
 .location {
     display: flex;
-    gap: 40px;
-    padding: 40px;
+    gap: 80px;
     height: auto !important;
 }
 
@@ -253,6 +259,12 @@ a, a:active {
     max-width: 60%;
 }
 
+.location_heading {
+    text-align: left;
+    line-height: 86%;
+    margin-bottom: 60px;
+}
+
 .location_img img {
     max-width: 100%;
     max-height: 100%;
@@ -260,7 +272,6 @@ a, a:active {
 
 .location_content {
     margin: 80px auto 0;
-    font-size: 28px;
     width: 40%;
 }
 
@@ -287,13 +298,104 @@ a, a:active {
     transition: all 200ms;
 }
 
-.questions {
-    font-size: 28px;
-    padding: 20px;
+.photos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
 }
 
-.questions button {
-    width: fit-content;
+.doodle {
+    max-width: 80%;
+}
+
+.doodle-mobile {
+    display: none;
+}
+
+
+.dress {
+    height: auto;
+    max-width: none;
+    position: relative;
+    height: 750px;
+}
+
+
+
+.dress_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.dress_heading {
+    color: #88460B;
+}
+
+.dress_content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.dress_content p {
+    width: 372px;
+    max-width: 35%;
+}
+
+.dress_content img {
+    width: 32px;
+    user-select: none;
+}
+
+.dress_carousel_container-desktop {
+    width: 928px;
+    max-width: 65%;
+        height: 470px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+}
+
+.dress_carousel-desktop {
+    display: flex;
+    gap: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 32px 6px 6px;
+}
+
+.dress_carousel_container-mobile, .dress_carousel-mobile {
+    display: none;
+}
+
+
+.dress_carousel_label {
+    position: absolute;
+    top: 220px;
+    right: 20px;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.dress_carousel_label div {
+    font-family: 'Gogol';
+    margin-bottom: -8px;
+}
+
+.dress_carousel_item {
+    max-width: 242px;
 }
 
 .timer {
@@ -381,9 +483,13 @@ a, a:active {
 }
 
 @media (max-width: 600px) {
+    .text {
+        font-size: 18px;
+    }
 .arrow_btn {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
+    justify-content: center;
 }
 
 .arrow_btn img {
@@ -424,7 +530,7 @@ a, a:active {
 }
 
 .programm_date {
-    font-size: 80px;
+    font-size: 80px !important;
 }
 
 .programm_content {
@@ -455,6 +561,16 @@ a, a:active {
 .location {
     flex-direction: column;
     position: relative;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.location_heading {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .location_img {
@@ -466,8 +582,10 @@ a, a:active {
 
 .location_content {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 0 20px;
-    margin-top: 620px;
+    margin-top: 660px;
     font-size: 18px;
     gap: 40px;
     width: 100%;
@@ -483,6 +601,92 @@ a, a:active {
     position: relative;
     max-width: 90%;
     left: -20px;
+}
+
+.photos {
+    padding: 20px 0;
+}
+
+.doodle {
+    display: none;
+}
+
+.doodle-mobile {
+    display: block;
+    max-width: 90%;
+}
+
+
+.dress_header {
+    flex-direction: column;
+}
+
+.dress_header img {
+    max-width: 90%;
+    margin: 12px auto 40px;
+}
+
+.dress_carousel_label {
+    position: static;
+    max-width: 182px;
+    margin: 16px 0 0 auto;
+}
+
+.dress_carousel_label img {
+    margin-top: -8px;
+}
+
+.heading_accent {
+    font-size: 64px;
+}
+
+.dress_content {
+    gap: 20px;
+}
+
+.dress_content, .dress_content p {
+    width: 100%;
+    max-width: none;
+}
+
+.dress_content img {
+    margin: 20px auto 0;
+    max-width: 28px;
+}
+
+.dress_content-last {
+    margin-top: 480px;
+    margin-bottom: 60px;
+}
+
+.dress_carousel_container-desktop, .dress_carousel-desktop {
+    display: none;
+}
+
+.dress_carousel_container-mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 385px;
+    z-index: 300;
+    width: 100%;
+}
+
+.dress_carousel-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    width: 100%;
+    flex-flow: row nowrap;
+    padding: 14px;
+}
+
+.dress_carousel-mobile::-webkit-scrollbar {
+    display: none;
 }
 
 .timer {

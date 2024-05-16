@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Макар и Германа</title>
 </head>
@@ -33,17 +32,16 @@
         </div>
     </section>
     
-    
     <section class="welcome container">
         <div class="welcome_img">
-            <img src="assets/media/welcome_photo.webp">
+            <img class="photo" src="assets/media/welcome_photo.webp">
         </div>
         <div class="welcome_content">
             <div class="welcome_text">
                 <p class="welcome_text_title">
                     Дорогие друзья, родные и&nbsp;близкие!
                 </p>
-                <p class="welcome_text_text">
+                <p class="welcome_text_text text">
                     Мы счастливы пригласить вас на&nbsp;нашу свадьбу. Для&nbsp;нас очень важно, чтобы вы&nbsp;смогли 
                     разделить с&nbsp;нами самое счастливое мгновение в&nbsp;нашей жизни. 
                     Порадуйте нас своим присутствием!
@@ -58,13 +56,13 @@
     </section>
     <section class="programm container">
         <div class="programm_content">
-            <p class="programm_date">
+            <p class="heading_accent programm_date">
                 3.08.2024
             </p>
             <p class="programm_title">
                 Содержание вечера:
             </p>
-            <div class="programm_programm">
+            <div class="programm_programm text">
                 <div class="programm_programm_item">
                     <div class="programm_programm_item_event">Сбор гостей</div>
                     <div class="programm_programm_item-dashed"></div>
@@ -97,14 +95,15 @@
                 </div>
             </div>
         </div>
-        <img src="assets/media/programm.JPG">
+        <img class="photo" src="assets/media/programm.JPG">
     </section>
     <section class="location container">
         <div class="location_img">
             <img src="assets/media/location.png">
         </div>
         <div class="location_content">
-                <div>
+            <h2 class="heading_accent location_heading">Место встречи</h2>
+                <div class="text">
                     <p>Тамбов, ул. Малиновского, 39</p>
                     <p>Парк-отель «Ples»</p>
                 </div>
@@ -114,6 +113,75 @@
                     </div>
                 </a>
         </div>
+    </section>
+    <section class="photos">
+        <img class="doodle" src="assets/media/doodle.png">
+        <img class="doodle-mobile" src="assets/media/doodle_mobile.png">
+    </section>
+    <section class="dress container">
+        <div class="dress_header">
+            <h2 class="heading_accent dress_heading">Дресскод</h2>
+            <img src="assets/media/color_palette.svg">
+        </div>
+        <div class="dress_content text">
+            <p>
+                Будем очень признательны, если при выборе образов вы выберете подобные тона и постараетесь не использовать полностью
+                белые и черные наряды.
+            </p>
+        </div>
+        <div class="dress_carousel_label">
+            <div>Вдохновение</div>
+            <img src="assets/media/scroll_arrow.svg">
+        </div>
+        <div class="dress_content dress_content-last text">
+            <p>
+               Мы прекрасно понимаем, как непросто может быть выбрать наряд, но не переживайте, мы будем очень рады Вас видеть в любом
+                наряде! 
+            </p>
+            <img src="assets/media/heart_red.svg">
+        </div>
+        
+        <div class="dress_carousel_container-desktop" id="carousel-container">
+            <div class="dress_carousel-desktop" id="carousel">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_1.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_2.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_3.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_4.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_5.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_6.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_7.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_8.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_9.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_10.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_11.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_12.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_13.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_14.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_15.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_16.png">
+            </div>
+        </div>
+        <div class="dress_carousel_container-mobile">
+            <div class="dress_carousel-mobile">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_1.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_2.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_3.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_4.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_5.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_6.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_7.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_8.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_9.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_10.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_11.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_12.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_13.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_14.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_15.png">
+                <img class="photo dress_carousel_item" src="assets/media/dress/dress_16.png">
+            </div>
+        </div>
+        
     </section>
     <section class="timer">
             <img src="assets/media/timer_photo.jpg" class="timer_bg">
@@ -136,12 +204,13 @@
                 <p>Вступайте, знакомьтесь, будьте в курсе наших новостей:</p>
             
             <div class="tg-btn">
-                <img src="assets/media/tg_icon.svg">
+                <a href="https://t.me/+wb5CTwIPBBcwZTEy" target="_blank">
+                    <img src="assets/media/tg_icon.svg">
+                </a>
             </div>
         </div>
             <div class="tg-desc_item">
                 <p>По всем вопросам можете писать нашему организатору Анне</p>
-            
             <div class="tg-btn">
                 <a href="https://wa.clck.bar/79202318280" target="_blank">
                     <img src="assets/media/wa_icon.svg">
@@ -151,10 +220,6 @@
         </div>
     </section>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"> </script>
-<script>
-    
-</script>
 <script src="index.js"></script>
 </body>
 </html>

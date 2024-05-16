@@ -23,6 +23,60 @@ document.getElementById('video-text-0').addEventListener('click', () => {
     document.getElementById('video-text-0').remove()
 })
 
+const carouselContainer = document.getElementById("carousel-container");
+const carousel = document.getElementById("carousel");
+
+if (carouselContainer && carousel) {
+
+let pressed = false;
+let startX;
+let x;
+
+carouselContainer.addEventListener("mousedown", (e) => {
+    pressed = true;
+    startX = e.offsetX - carousel.offsetLeft;
+    carouselContainer.style.cursor = "grabbing";
+});
+
+carouselContainer.addEventListener("mouseenter", () => {
+    carouselContainer.style.cursor = "grab";
+});
+
+carouselContainer.addEventListener("mouseup", () => {
+    carouselContainer.style.cursor = "grab";
+    pressed = false;
+});
+
+carouselContainer.addEventListener("mousemove", (e) => {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+    carousel.style.left = `${x - startX}px`;
+});
+
+let boundItems = () => {
+    let outerBound = carouselContainer.getBoundingClientRect();
+    let innerBound = carousel.getBoundingClientRect();
+
+    if (parseInt(carousel.style.left) > 0) {
+    carousel.style.left = "0px";
+    }
+
+    if (innerBound.right < outerBound.right) {
+    carousel.style.left = `-${innerBound.width - outerBound.width}px`;
+    }
+};
+carouselContainer.addEventListener("mousemove", (e) => {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+    carousel.style.left = `${x - startX}px`;
+    boundItems();
+});
+}
+
 const updateTimer = () => {
     const daysCount = document.getElementById('days-count')
     const daysLabel = document.getElementById('days-label')
