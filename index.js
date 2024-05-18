@@ -1,10 +1,10 @@
 const video = document.getElementById("video")
 video.setAttribute("autoplay", "autoplay")
 const preloader = document.getElementById("preload")
+
 video.addEventListener("loadeddata", () => {
-  if (video.readyState === 4) {
+  if (video.readyState === 3) {
     preloader.style.opacity = "0"
-    
     const fadeIn = (number) => {
         setTimeout(() => {
             document.getElementById(`video-text-${number}`).style.opacity = 1
