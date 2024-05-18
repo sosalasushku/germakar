@@ -2,19 +2,21 @@ const video = document.getElementById("video")
 video.setAttribute("autoplay", "autoplay")
 const preloader = document.getElementById("preload")
 
-video.addEventListener("loadeddata", () => {
-  if (video.readyState === 3) {
-    preloader.style.opacity = "0"
-    const fadeIn = (number) => {
-        setTimeout(() => {
-            document.getElementById(`video-text-${number}`).style.opacity = 1
-        }, (number) * 1500)
+if (video && preloader) {
+    video.addEventListener("loadeddata", () => {
+    if (video.readyState === 3) {
+        preloader.style.opacity = "0"
+        const fadeIn = (number) => {
+            setTimeout(() => {
+                document.getElementById(`video-text-${number}`).style.opacity = 1
+            }, (number) * 1500)
+        }
+        [0,1,2,3,4,5].forEach(num => {
+            fadeIn(num)
+        })
     }
-    [0,1,2,3,4,5].forEach(num => {
-        fadeIn(num)
     })
-  }
-});
+}
 
 const audio = document.getElementById('audio')
 document.getElementById('video-text-0').addEventListener('click', () => {
