@@ -346,6 +346,12 @@ a, a:active {
 .dress_content p {
     width: 372px;
     max-width: 35%;
+    margin-top: 20px;
+}
+
+.dress_content-last {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .dress_content img {
